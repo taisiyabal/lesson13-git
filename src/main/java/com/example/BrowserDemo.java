@@ -25,6 +25,13 @@ public class BrowserDemo {
             System.out.println(button.getTagName());
             List<WebElement> inputs = driver.findElements(By.cssSelector("input"));
             System.out.println(inputs.size());
+
+            List<WebElement> options = driver.findElements(By.cssSelector("option"));
+            System.out.println("option: " + options.size());
+            for (WebElement option : options) {
+                System.out.println(option.getText());
+            }
+
             List<WebElement> labels = driver.findElements(By.cssSelector("label"));
             System.out.println("Labels: " + labels.size());
             for (WebElement label : labels) {
