@@ -14,3 +14,7 @@
 - Тесты: `mvn test`
 - BrowserDemo: открыть `src/main/java/com/example/BrowserDemo.java`
   в IntelliJ IDEA и нажать зелёную кнопку Run рядом с `main`
+
+## Что выводит BrowserDemo
+- Текст заголовка после отправки формы
+  - Подписи полей формы и пункты выпадающего списка
