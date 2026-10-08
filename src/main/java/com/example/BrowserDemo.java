@@ -25,6 +25,11 @@ public class BrowserDemo {
             System.out.println(button.getTagName());
             List<WebElement> inputs = driver.findElements(By.cssSelector("input"));
             System.out.println(inputs.size());
+            List<WebElement> labels = driver.findElements(By.cssSelector("label"));
+            System.out.println("Labels: " + labels.size());
+            for (WebElement label : labels) {
+                System.out.println(label.getText());
+            }
             button.click();
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
             WebElement heading = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("h1")));
