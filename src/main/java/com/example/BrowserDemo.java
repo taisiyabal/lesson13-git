@@ -37,12 +37,13 @@ public class BrowserDemo {
             for (WebElement label : labels) {
                 System.out.println(label.getText());
             }
+            System.out.println("Before click");
             button.click();
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
             WebElement heading = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("h1")));
             System.out.println(heading.getText());
         } finally {
-            //driver.quit();
+            driver.quit();
         }
     }
 }
